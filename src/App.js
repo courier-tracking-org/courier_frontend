@@ -9,7 +9,7 @@ import ParcelList from './components/ParcelList';
  */
 function App() {
     // State to trigger refresh in ParcelList when a new parcel is created
-        const [refreshTrigger, setRefreshTrigger] = useState(0);
+          const [refreshTrigger, setRefreshTrigger] = useState(0);
 
     /**
      * Callback function passed to ParcelForm
