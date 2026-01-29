@@ -23,7 +23,7 @@ function App() {
         <div className="App">
             {/* Header */}
             <header className="app-header">
-                <h1>Courier / Parcel Receipt Management System</h1>
+                     <h1>Courier / Parcel Receipt Management System</h1>
                 <p>Track and manage courier parcels efficiently</p>
             </header>
 
