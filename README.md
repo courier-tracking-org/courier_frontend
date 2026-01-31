@@ -19,6 +19,8 @@ npm start
 
 The application will automatically open in your browser at: **http://localhost:3000**
 
+Deployed frontend (custom domain): **https://courier-tracking-by-dharshini.vercel.app**
+
 ---
 
 ## 🔧 Make sure Backend is running first!
