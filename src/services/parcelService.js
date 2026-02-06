@@ -6,6 +6,19 @@ import axios from 'axios';
  */
 const API_BASE_URL = `${process.env.REACT_APP_BACKEND_URL}/api/parcels`;
 
+// Create axios instance with default config
+const axiosInstance = axios.create({
+    baseURL: process.env.REACT_APP_BACKEND_URL,
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    timeout: 10000
+});
+
+// Log the API URL for debugging
+console.log('API Base URL:', API_BASE_URL);
+console.log('Backend URL from env:', process.env.REACT_APP_BACKEND_URL);
+
 /**
  * Fetch all parcels from the backend
  * GET /api/parcels
