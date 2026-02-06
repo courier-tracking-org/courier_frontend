@@ -6,7 +6,13 @@ import axios from 'axios';
  */
 
 // Create axios instance with default config
-
+const axiosInstance = axios.create({
+    baseURL: process.env.REACT_APP_BACKEND_URL,
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    timeout: 60000  // Increased to 60 seconds to handle delayed backends
+});
 
 // Log the backend URL for debugging
 console.log('Backend URL from env:', process.env.REACT_APP_BACKEND_URL);
