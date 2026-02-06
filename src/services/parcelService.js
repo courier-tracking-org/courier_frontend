@@ -4,7 +4,6 @@ import axios from 'axios';
  * Service for making API calls to the backend
  * Base URL points to Spring Boot backend running on the configured port
  */
-const API_BASE_URL = `${process.env.REACT_APP_BACKEND_URL}/api/parcels`;
 
 // Create axios instance with default config
 const axiosInstance = axios.create({
@@ -15,8 +14,7 @@ const axiosInstance = axios.create({
     timeout: 10000
 });
 
-// Log the API URL for debugging
-console.log('API Base URL:', API_BASE_URL);
+// Log the backend URL for debugging
 console.log('Backend URL from env:', process.env.REACT_APP_BACKEND_URL);
 
 /**
@@ -25,7 +23,7 @@ console.log('Backend URL from env:', process.env.REACT_APP_BACKEND_URL);
  */
 export const getAllParcels = async () => {
     try {
-        const response = await axios.get(API_BASE_URL);
+        const response = await axiosInstance.get('/api/parcels');
         return response.data;
     } catch (error) {
         console.error('Error fetching parcels:', error);
@@ -40,7 +38,7 @@ export const getAllParcels = async () => {
  */
 export const createParcel = async (parcelData) => {
     try {
-        const response = await axios.post(API_BASE_URL, parcelData);
+        const response = await axiosInstance.post('/api/parcels', parcelData);
         return response.data;
     } catch (error) {
         console.error('Error creating parcel:', error);
@@ -55,7 +53,7 @@ export const createParcel = async (parcelData) => {
  */
 export const getParcelById = async (id) => {
     try {
-        const response = await axios.get(`${API_BASE_URL}/${id}`);
+        const response = await axiosInstance.get(`/api/parcels/${id}`);
         return response.data;
     } catch (error) {
         console.error('Error fetching parcel:', error);
@@ -71,7 +69,7 @@ export const getParcelById = async (id) => {
  */
 export const updateParcel = async (id, parcelData) => {
     try {
-        const response = await axios.put(`${API_BASE_URL}/${id}`, parcelData);
+        const response = await axiosInstance.put(`/api/parcels/${id}`, parcelData);
         return response.data;
     } catch (error) {
         console.error('Error updating parcel:', error);
@@ -86,7 +84,7 @@ export const updateParcel = async (id, parcelData) => {
  */
 export const deleteParcel = async (id) => {
     try {
-        await axios.delete(`${API_BASE_URL}/${id}`);
+        await axiosInstance.delete(`/api/parcels/${id}`);
     } catch (error) {
         console.error('Error deleting parcel:', error);
         throw error;
