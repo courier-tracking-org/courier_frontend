@@ -31,10 +31,12 @@ const ParcelList = ({ refreshTrigger, onParcelUpdated }) => {
         
         try {
             const data = await getAllParcels();
-            setParcels(data);
+            // Ensure data is always an array
+            setParcels(Array.isArray(data) ? data : []);
         } catch (err) {
             setError('Failed to fetch parcels. Make sure the backend is running.');
             console.error('Error fetching parcels:', err);
+            setParcels([]); // Set empty array on error
         } finally {
             setIsLoading(false);
         }
