@@ -1,75 +1,220 @@
-# FRONTEND - React Application
+Perfect 👍
+Below is a clean, professional, and copy-paste ready README.md for your Courier Tracking System – Frontend Application.
 
-## 📦 How to Run the Frontend
+You can directly paste this into your frontend repository README.md without any changes.
 
-### Step 1: Navigate to the frontend folder
+# 📦 Courier Tracking System – Frontend Application
+
+## Overview
+
+A modern, responsive React-based frontend application for managing courier and parcel operations.  
+This system provides a clean and intuitive dashboard to create, view, edit, and track courier parcels efficiently.
+
+The Courier Tracking frontend acts as a parcel management interface that communicates with a Spring Boot backend using RESTful APIs.
+
+---
+
+## 📊 Project Presentation
+
+View the comprehensive project presentation to understand the complete architecture, design decisions, and implementation details:
+
+📄 [Courier Tracking Project Presentation](./devimg/courier%20tracking%20project%20presentation.pdf)
+
+This presentation covers:
+- Project overview and objectives
+- Architecture and design patterns
+- Technology stack rationale
+- Features and capabilities
+- Deployment strategy
+- Challenges and solutions
+
+---
+
+## What Does This Frontend Do?
+
+This Courier Tracking frontend is a complete management dashboard that allows users to:
+
+- Add new courier parcels
+- View all existing parcels
+- Edit parcel details
+- Track parcel delivery status (Received, In Transit, Delivered)
+- Receive real-time updates through backend API integration
+- Access the system on desktop and mobile devices with a responsive UI
+
+---
+
+## Tech Stack
+
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **HTTP Client:** Axios
+- **Language:** JavaScript (ES Modules)
+- **Styling:** CSS
+- **Deployment:** Vercel
+
+---
+
+## Project Structure
+
+
+
+src/
+├── components/
+│ ├── ParcelForm.js # Form to create new parcels
+│ ├── ParcelList.js # Displays list of parcels
+│ └── EditParcelModal.js # Modal to edit parcel details
+│
+├── services/
+│ └── parcelService.js # Axios API service for backend communication
+│
+├── App.js # Main application component
+├── index.js # Application entry point
+└── App.css # Global styles
+
+
+---
+
+## Features
+
+- 📦 Parcel creation and listing  
+- ✏️ Edit parcel details  
+- 🔄 Real-time backend API integration  
+- 📱 Responsive user interface  
+- ⚡ Fast performance with Vite  
+
+---
+
+## Development – Frontend Setup
+
+### Prerequisites
+
+- Node.js 16+
+- npm
+
+### Installation
+
 ```bash
-cd frontend
-```
-
-### Step 2: Install dependencies (first time only)
-```bash
+git clone https://github.com/courier-tracking-org/courier_frontend.git
+cd courier_frontend
 npm install
-```
 
-### Step 3: Start the development server
-```bash
-npm start
-```
+Start Development Server
+npm run dev
 
-The application will automatically open in your browser at: **http://localhost:3000**
 
----
+The application will be available at:
 
-## 🚀 Deployed Frontend
+👉 http://localhost:3000
 
-The frontend is deployed at: **https://courier-tracking-by-dharshini.vercel.app**
+API Integration
 
----
+The frontend communicates with the backend using Axios through the parcelService.js module.
 
-## 🔧 Make sure Backend is running first!
+Backend Dependency
 
-Before starting the frontend, ensure the Spring Boot backend is running on port 8006:
-```bash
-cd d:\courier_tracking\courier_tracking
-mvn spring-boot:run
-```
+This frontend depends on a Spring Boot backend service that provides REST APIs for managing parcels.
 
----
+⚠️ Without the backend service running, the UI will load but data operations will not function.
 
-## 📁 Frontend Structure
+Environment Configuration
 
-```
-frontend/
-├── src/
-│   ├── components/
-│   │   ├── ParcelForm.js
-│   │   └── ParcelList.js
-│   ├── services/
-│   │   └── parcelService.js
-│   ├── App.js
-│   ├── App.css
-│   └── index.js
-├── public/
-│   └── index.html
-└── package.json
-```
+The backend API base URL is configured using environment variables.
 
----
+Example .env file
+VITE_API_BASE_URL=https://<backend-url>
 
-## ✅ Features
 
-- Add new parcels with form
-- View all parcels in table
-- Delete parcels
-- Status tracking (RECEIVED, PENDING, DELIVERED)
-- Responsive design
-- Real-time updates
+This allows smooth switching between local, staging, and production environments.
 
----
+Build Frontend for Production
+npm run build
 
-## Challenges Faced
+Preview Production Build
+npm run preview
 
-During development and deployment, several integration and configuration challenges were encountered, including backend API connectivity and environment configuration. These issues were resolved by using environment-based API URLs and proper build configuration.
+Frontend Build Screenshot
 
-Detailed explanations of these challenges and solutions are documented in the backend repository.
+![Frontend Build Success](./devimg/build%20success.png)
+
+Code Quality – SonarCloud
+
+This project integrates SonarCloud for static code analysis and quality monitoring.
+
+Organization: courier-tracking-org
+
+Project Key: courier-tracking-org
+
+SonarCloud URL: https://sonarcloud.io
+
+![SonarCloud Analysis](./devimg/sonar%20analysis.png)
+
+Project Pull Request Workflow
+
+For contributing to this project, follow the standard Git workflow:
+
+Create a feature branch from main
+
+Commit changes with clear messages
+
+Push to your branch
+
+Create a Pull Request
+
+Ensure all CI checks pass before merging
+
+![Pull Request Workflow](./devimg/pull%20request.png)
+
+🚀 Deployment
+
+This frontend application is deployed on Vercel and is live at:
+
+🌐 https://couriertracking.vercel.app
+
+GitHub repository is connected to Vercel
+
+Each push to the main branch triggers automatic deployment
+
+Vercel's global CDN ensures fast delivery and low latency
+
+![Vercel Deployment Dashboard](./devimg/vercel%20deployment.png)
+
+![Frontend Vercel Deployment](./devimg/frontend%20vercel%20deployment.png)
+
+Challenges Faced and Solutions Implemented
+Challenge 1: Backend API Connectivity
+
+Issue: Reliable frontend–backend communication
+Solution: Implemented environment-based API configuration
+
+Challenge 2: Environment Configuration
+
+Issue: Managing different backend URLs
+Solution: Used Vite environment variables
+
+Challenge 3: Build Optimization
+
+Issue: Optimizing production bundle size
+Solution: Leveraged Vite’s tree-shaking and optimized build process
+
+Challenge 4: Backend Dependency
+
+Issue: UI fails when backend is unavailable
+Solution: Added proper error handling and user feedback
+
+Known Limitations
+
+Requires an active backend service
+
+Parcel data will not load if backend is down
+
+No authentication or role-based access control
+
+Intended for academic and demonstration purposes
+
+License
+
+This project is intended for academic and learning purposes.
+
+Support
+
+For issues or questions, please refer to the project repository or contact the developer.
