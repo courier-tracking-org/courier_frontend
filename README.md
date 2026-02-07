@@ -1,8 +1,3 @@
-Perfect 👍
-Below is a clean, professional, and copy-paste ready README.md for your Courier Tracking System – Frontend Application.
-
-You can directly paste this into your frontend repository README.md without any changes.
-
 # 📦 Courier Tracking System – Frontend Application
 
 ## Overview
