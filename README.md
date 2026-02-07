@@ -9,22 +9,6 @@ The Courier Tracking frontend acts as a parcel management interface that communi
 
 ---
 
-## 📊 Project Presentation
-
-View the comprehensive project presentation to understand the complete architecture, design decisions, and implementation details:
-
-📄 [Courier Tracking Project Presentation](./devimg/courier-tracking-project-presentation.pdf)
-
-This presentation covers:
-- Project overview and objectives
-- Architecture and design patterns
-- Technology stack rationale
-- Features and capabilities
-- Deployment strategy
-- Challenges and solutions
-
----
-
 ## What Does This Frontend Do?
 
 This Courier Tracking frontend is a complete management dashboard that allows users to:
@@ -238,3 +222,19 @@ This project is intended for academic and learning purposes.
 ## Support
 
 For issues or questions, please refer to the project repository or contact the developer.
+
+---
+
+## 📊 Project Presentation
+
+View the comprehensive project presentation to understand the complete architecture, design decisions, and implementation details:
+
+📄 [Courier Tracking Project Presentation](./devimg/courier-tracking-project-presentation.pdf)
+
+This presentation covers:
+- Project overview and objectives
+- Architecture and design patterns
+- Technology stack rationale
+- Features and capabilities
+- Deployment strategy
+- Challenges and solutions
