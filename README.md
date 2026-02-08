@@ -238,3 +238,19 @@ This presentation covers:
 - Features and capabilities
 - Deployment strategy
 - Challenges and solutions
+
+---
+
+## 🎥 Project Demo Video
+
+Watch the complete demo video showcasing the Courier Tracking System in action:
+
+🎬 [Courier Tracking System Demo Video](https://drive.google.com/file/d/1pZXtoj6_CTyNvB9nz8Y2Q6aP2SSHIIw5/view?usp=sharing)
+
+The demo includes:
+- Application overview and features
+- Creating new parcels
+- Viewing and managing parcel list
+- Editing parcel details
+- Real-time updates and status tracking
+- UI/UX walkthrough
