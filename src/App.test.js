@@ -10,4 +10,3 @@ test("renders app without crash", () => {
   expect(container.textContent).toContain("Courier / Parcel Receipt Management System");
 });
 
-
