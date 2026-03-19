@@ -99,41 +99,6 @@ body {
     align-items: start;
 }
 
-/* Parcel Status Summary */
-.status-summary {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding: 1.2rem;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.summary-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.summary-label {
-    color: #475569;
-}
-
-.summary-count {
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    color: white;
-}
-
-.summary-count.received { background-color: #3b82f6; } /* Blue */
-.summary-count.pending { background-color: #f59e0b; } /* Amber */
-.summary-count.delivered { background-color: #10b981; } /* Emerald */
-
 .form-group {
     display: flex;
     flex-direction: column;
