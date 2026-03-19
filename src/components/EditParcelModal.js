@@ -7,7 +7,7 @@ import { updateParcel } from '../services/parcelService';
  */
 const EditParcelModal = ({ parcel, onClose, onUpdate }) => {
     const [formData, setFormData] = useState({
-        senderName: '',
+         senderName: '',
         receiverName: '',
         parcelDescription: '',
         receivedDate: '',
