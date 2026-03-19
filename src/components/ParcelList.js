@@ -120,8 +120,19 @@ const ParcelList = ({ refreshTrigger, onParcelUpdated }) => {
         fetchParcels();
     }, [refreshTrigger]);
 
+    const receivedCount = parcels.filter((parcel) => parcel.status === 'RECEIVED').length;
+    const pendingCount = parcels.filter((parcel) => parcel.status === 'PENDING').length;
+    const deliveredCount = parcels.filter((parcel) => parcel.status === 'DELIVERED').length;
+
     return (
         <div className="parcel-list-container">
+            <div className="status-summary">
+                <h3>Parcel Summary</h3>
+                <p className="summary-received">Received: {receivedCount}</p>
+                <p className="summary-pending">Pending: {pendingCount}</p>
+                <p className="summary-delivered">Delivered: {deliveredCount}</p>
+            </div>
+
             <h2>Parcel List</h2>
 
             {error && <div className="alert alert-error">{error}</div>}
